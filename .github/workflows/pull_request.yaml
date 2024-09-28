@@ -1,5 +1,8 @@
 name: pull-request-workflow
-on: pull_request
+#  types: [opened] 이건 pull request가 생성된 그 시점에만 실행되게 하는것 아니면 pull request를 생성하지 않아도 지속적으로 실행된다.
+on:
+  pull_request:
+    types: [opened]
 
 jobs:
   pull-request-job:
