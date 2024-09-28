@@ -1,11 +1,11 @@
 # 액션창에서 시각화하기 위한 이름
-name: push-workflow
+name: push-workflow 1
 # 어떤 액션으로 인해 깃헙 액션을 트리거 시킬지 정할수 있다.
 on: push
 # 실행시켜야하는 집합 필수
 # runs-on: ubuntu-latest이건 push-jobs이 ubuntu-latest에서 실행된다는 의미이다.
 jobs:
-  push-jobs:
+  push-job:
     runs-on: ubuntu-latest
     steps:
       - name: step1
