@@ -12,5 +12,5 @@ jobs:
         run: echo hello world
       - name: step2
         run: |
-          echo hello world-1
-          echo hello world-2
+          echo hello push-1
+          echo push-2
