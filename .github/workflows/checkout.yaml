@@ -1,5 +1,5 @@
 name: checkout
-on: workflow_diskpatch
+on: workflow_dispatch
 
 jobs:
   no-checkout:
