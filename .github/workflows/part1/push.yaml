@@ -1,5 +1,5 @@
 # 액션창에서 시각화하기 위한 이름
-name: push-workflow1
+name: push-workflow
 # 어떤 액션으로 인해 깃헙 액션을 트리거 시킬지 정할수 있다.
 on: push
 # 실행시켜야하는 집합 필수
