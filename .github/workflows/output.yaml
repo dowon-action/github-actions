@@ -4,8 +4,6 @@ on: push
 jobs:
   create-output:
     runs-on: ubuntu-latest
-    outputs:
-      value: ${{ steps.check-output.outputs.test }}
     steps:
       - name: echo output
         id: check-output
