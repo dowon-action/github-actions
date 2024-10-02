@@ -9,8 +9,8 @@ jobs:
         run: cat README.md
 
   checkout:
-  runs-on: ubuntu-latest
-    steps:
+    runs-on: ubuntu-latest
+      steps:
       - name: use checkout actions
         uses: actions/checkout@v4
       - name: check file list
