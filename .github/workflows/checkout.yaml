@@ -10,7 +10,7 @@ jobs:
 
   checkout:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - name: use checkout actions
         uses: actions/checkout@v4
       - name: check file list
