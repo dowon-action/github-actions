@@ -23,8 +23,10 @@ jobs:
       - name: gh auth login
         run: echo "${{ secrets.PERSONAL_ACCESS_TOKEN }}" | gh auth login --with-token
       - name: create-repo
+        id: create_repo
         run: |
-          gh repo create dowon-action/${{ inputs.prefix }}-${{ inputs.name }} --public --add-readme
+          output=$(gh repo create dowon-action/${{ inputs.prefix }}-${{ inputs.name }} --public --add-readme)
+          echo "::set-output name=result::$output"
       - name: slack
         if: always()
         uses: slackapi/slack-github-action@v1.24.0
@@ -37,9 +39,9 @@ jobs:
                   "color": "28a745",
                   "fields": [
                     {
-                      "title": "create repo result ${{ steps.create-repo.outcome }}",
+                      "title": "create repo result ${{ steps.create_repo.outcome }}",
                       "short": true,
-                      "value": "${{ inputs.prefix }}-${{ inputs.name }}"
+                      "value": "${{ inputs.prefix }}-${{ inputs.name }}\n${{ steps.create_repo.outputs.result }}"
                     } 
                   ]
                 }
