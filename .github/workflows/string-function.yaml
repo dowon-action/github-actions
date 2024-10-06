@@ -13,15 +13,15 @@ jobs:
         run: echo "test"
 
       - name: endswith
-        if: startswith('github actions', 'ions')
+        if: endswith('github actions', 'ions')
         run: echo "icons"
       - name: endswith
-        if: startswith('github actions', 'test')
+        if: endswith('github actions', 'test')
         run: echo "test"
 
       - name: contains
-        if: startswith('github actions', 'act')
+        if: contains('github actions', 'act')
         run: echo "act"
       - name: contains
-        if: startswith('github actions', 'test')
+        if: contains('github actions', 'git')
         run: echo "test"
