@@ -1,7 +1,7 @@
 import React from "react";
 
 const App = () => {
-  return <div>cicd</div>;
+  return <div>cicd2</div>;
 };
 
 export default App;
